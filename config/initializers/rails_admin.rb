@@ -1,5 +1,4 @@
 RailsAdmin.config do |config|
-
   config.main_app_name = ['Gerenciamento escolar', 'Admin']
 
   config.authorize_with do
