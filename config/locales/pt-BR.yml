@@ -7,7 +7,7 @@ pt-BR:
         phone: "Telefone"
         created_at: "Criado em"
         updated_at: "Atualizado em"
-      school_classes:
+      school_class:
         period: "Periodo de aula"
         name: "Nome"
         created_at: "Criado em"
@@ -16,14 +16,14 @@ pt-BR:
         name: "Nome"
         created_at: "Criado em"
         updated_at: "Atualizado em"
-      students:
+      student:
         name: "Nome"
         created_at: "Criado em"
         updated_at: "Atualizado em"
         responsible_phone: "Telefone do responsável"
         responsible_name: "Nome do responsável"
     models:
-      school_classes:
+      school_class:
         one: turma
         other: turmas
       school_discipline:
@@ -32,7 +32,7 @@ pt-BR:
       teacher:
         one: professor
         other: professores
-      students:
+      student:
         one: aluno
         other: alunos
     errors:
