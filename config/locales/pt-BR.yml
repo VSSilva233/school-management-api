@@ -1,5 +1,5 @@
 pt-BR:
-  activerecord: 
+  activerecord:
     attributes:
       teacher:
         name: "Nome"
@@ -7,10 +7,34 @@ pt-BR:
         phone: "Telefone"
         created_at: "Criado em"
         updated_at: "Atualizado em"
+      school_classes:
+        period: "Periodo de aula"
+        name: "Nome"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      school_discipline:
+        name: "Nome"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+      students:
+        name: "Nome"
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        responsible_phone: "Telefone do responsável"
+        responsible_name: "Nome do responsável"
     models:
+      school_classes:
+        one: turma
+        other: turmas
+      school_discipline:
+        one: disciplina
+        other: disciplinas
       teacher:
-        one: Professor
-        other: Professores
+        one: professor
+        other: professores
+      students:
+        one: aluno
+        other: alunos
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
@@ -24,7 +48,7 @@ pt-BR:
     - sex
     - sáb
     abbr_month_names:
-    - 
+    -
     - jan
     - fev
     - mar
@@ -50,7 +74,7 @@ pt-BR:
       long: "%d de %B de %Y"
       short: "%d de %B"
     month_names:
-    - 
+    -
     - janeiro
     - fevereiro
     - março
