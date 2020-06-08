@@ -1,13 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <style>
-      /* Email styles need to be inline */
-    </style>
-  </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      font-family: 'Work Sans', sans-serif;
+      text-align: justify;
+      line-height: 1.5;
+    }
+
+    .side-padder {
+      padding: 16px 0;
+    }
+
+    .footer-frame {
+      background-color: #00C6A7;
+      height: 104px;
+      padding: 16px 32px;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      color: #FFFFFF;
+      padding: 2% 12%;
+      text-align: left;
+      font-family: 'Work Sans', sans-serif;
+    }
+
+    .outer-table {
+      margin-top: 16px;
+      background-color: #FFFFFF;
+      border: solid 2px #00C6A7;
+      border-radius: 4px;
+      max-width: 1024px;
+    }
+
+    .inner-table {
+      border-top: solid 4px #00C6A7;
+      border-radius: 4px;
+      float: left;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <table cellpadding="0" cellspacing="0" align="center" class="outer-table">
+    <tr>
+      <td>
+        <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" height="auto" class="inner-table">
+
+          <tr>
+          </tr>
+          <tr>
+            <td class="side-padder">
+
+              <div style="border-radius: 4px;">
+                <div style="display: flex; background-color: white;">
+                  <div style="padding: 2% 8%;">
+                    <%= yield %>
+                  </div>
+                </div>
+              </div>
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr class="footer-frame">
+      <td>
+        <div class="footer-text">
+          <p>
+            <%= t('mail.automatic_message') %>
+          </p>
+          <p>
+            <%= t('mail.copyright_message') %>
+          </p>
+        </div>
+      </td>
+    </tr>
+  </table>
+</body>
 </html>

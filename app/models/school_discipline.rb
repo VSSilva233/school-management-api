@@ -1,2 +1,0 @@
-class SchoolDiscipline < ApplicationRecord
-end

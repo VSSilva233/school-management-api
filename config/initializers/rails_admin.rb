@@ -1,5 +1,6 @@
 RailsAdmin.config do |config|
   config.main_app_name = ['Gerenciamento escolar', 'Admin']
+   config.excluded_models = ['NotificationStudent']
 
   config.authorize_with do
     authenticate_or_request_with_http_basic('Gerenciamento escolar') do |username, password|
@@ -13,8 +14,11 @@ RailsAdmin.config do |config|
     index
     new
     show
-    edit
+    edit do
+      except ["Notification"]
+    end
     delete
     show_in_app
+    export
   end
 end

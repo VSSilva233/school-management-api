@@ -10,22 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_28_002233) do
+ActiveRecord::Schema.define(version: 2020_06_08_041540) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "school_classes", force: :cascade do |t|
-    t.string "name"
-    t.string "period"
+  create_table "notification_students", force: :cascade do |t|
+    t.bigint "student_id"
+    t.bigint "notification_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["notification_id"], name: "index_notification_students_on_notification_id"
+    t.index ["student_id"], name: "index_notification_students_on_student_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "text"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "school_disciplines", force: :cascade do |t|
-    t.string "name"
+  create_table "occurrences", force: :cascade do |t|
+    t.string "description"
+    t.string "photo"
+    t.bigint "student_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["student_id"], name: "index_occurrences_on_student_id"
   end
 
   create_table "students", force: :cascade do |t|
@@ -35,14 +46,10 @@ ActiveRecord::Schema.define(version: 2020_04_28_002233) do
     t.date "birthday"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string "name"
+    t.string "responsible_email"
     t.string "cpf"
-    t.string "phone"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.string "email"
+    t.string "photo"
   end
 
 end

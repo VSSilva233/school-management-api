@@ -10,8 +10,8 @@ default: &default
   timeout: 5000
   host: localhost
   username: postgres
-  password: root
-  
+  password: 'root'
+
 development:
   <<: *default
   database: school_management_development

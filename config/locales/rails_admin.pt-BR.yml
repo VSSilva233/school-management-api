@@ -12,10 +12,10 @@ pt-BR:
       filter: "Filtrar"
       refresh: "Atualizar"
       show_all: "Mostrar tudo"
-      add_filter: "Novo Filtro..."
+      add_filter: "Novo filtro..."
       bulk_menu_title: "Itens selecionados..."
       remove: "Remover"
-      add_new: "Criar Novo"
+      add_new: "Criar novo(a)"
       chosen: "%{name} escolhido"
       chose_all: "Escolher tudo"
       clear_all: "Limpar tudo"
@@ -39,6 +39,7 @@ pt-BR:
       created_at: "Data/Hora"
       item: "Item"
       message: "Mensagem"
+      last_created: Último criado
     actions:
       dashboard:
         title: "Administração do Site"
@@ -55,11 +56,11 @@ pt-BR:
       show_in_app:
         menu: "Mostrar na aplicação"
       new:
-        title: "Novo %{model_label}"
-        menu: "Criar novo"
-        breadcrumb: "Novo"
-        link: "Criar um novo %{model_label}"
-        done: "criado"
+        title: "Novo(a) %{model_label}"
+        menu: "Criar novo(a)"
+        breadcrumb: "Novo(a)"
+        link: "Criar um novo(a) %{model_label}"
+        done: "criado(a)"
       edit:
         title: "Editar %{model_label} '%{object_label}'"
         menu: "Editar"
@@ -71,7 +72,7 @@ pt-BR:
         menu: "Remover"
         breadcrumb: "Remover"
         link: "Remover '%{object_label}'"
-        done: "removido"
+        done: "removido(a)"
       bulk_delete:
         title: "Remover %{model_label_plural}"
         menu: "Remover vários"
@@ -94,8 +95,8 @@ pt-BR:
         breadcrumb: "Histórico"
     form:
       cancel: "Cancelar"
-      basic_info: "Informação Básica"
-      required: "Obrigatórios"
+      basic_info: "Informação básica"
+      required: "Obrigatório"
       optional: "Opcional"
       one_char: "caracter"
       char_length_up_to: "comprimento até"
@@ -108,7 +109,7 @@ pt-BR:
       confirmation: "Sim, tenho a certeza"
       delete_confirmation: "Confirmar apagar"
       bulk_delete: "Os seguintes objetos serão apagados, o que pode apagar ou deixar orfãos as dependências relacionadas"
-    export:      
+    export:
       confirmation: "Exportar para %{name}"
       select: "Selecionar campos para exportar"
       fields_from: "Campos de %{name}"
@@ -117,6 +118,7 @@ pt-BR:
       options_for: "Opções para %{name}"
       empty_value_for_associated_objects: "<vazio>"
       click_to_reverse_selection: 'Click para inverter selecção'
+      select_all_fields: "Selecionar todos os campos"
       csv:
         header_for_root_methods: "%{name}" # 'model' is available
         header_for_association_methods: "%{name} [%{association}]"

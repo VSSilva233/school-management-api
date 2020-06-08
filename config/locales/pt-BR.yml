@@ -1,43 +1,69 @@
 pt-BR:
   activerecord:
     attributes:
-      teacher:
-        name: "Nome"
-        cpf: "CPF"
-        phone: "Telefone"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
-      school_class:
-        period: "Periodo de aula"
-        name: "Nome"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
-      school_discipline:
-        name: "Nome"
-        created_at: "Criado em"
-        updated_at: "Atualizado em"
       student:
         name: "Nome"
         created_at: "Criado em"
         updated_at: "Atualizado em"
         responsible_phone: "Telefone do responsável"
         responsible_name: "Nome do responsável"
+        responsible_email: "Email do responsável"
+        cpf: "CPF"
+        email: "Email"
+        photo: "Foto"
+        birthday: "Data de nascimento"
+        occurrences: "Atas"
+      occurrence:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        student: "Aluno"
+        student_id: "Aluno"
+        description: "Informações da ata"
+        photo: "Imagem"
+      notification:
+        created_at: "Criado em"
+        updated_at: "Atualizado em"
+        text: "Texto da notificação"
+        students: "Alunos"
     models:
-      school_class:
-        one: turma
-        other: turmas
-      school_discipline:
-        one: disciplina
-        other: disciplinas
-      teacher:
-        one: professor
-        other: professores
       student:
         one: aluno
         other: alunos
+      occurrence:
+        one: ata(ocorrência)
+        other: atas(ocorrências)
+      notification:
+        one: notificação
+        other: notificações
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
+      attributes:
+        student:
+          name:
+            blank: "é obrigatório"
+          created_at:
+            blank: "é obrigatório"
+          updated_at:
+            blank: "é obrigatório"
+          responsible_phone:
+            blank: "é obrigatório"
+          responsible_name:
+            blank: "é obrigatório"
+          responsible_email:
+            blank: "é obrigatório"
+          cpf:
+            blank: "é obrigatório"
+          email:
+            blank: "é obrigatório"
+        occurrence:
+          description:
+            blank: "é obrigatório"
+          photo:
+            blank: "é obrigatório"
+        occurrence:
+          notification:
+            blank: "é obrigatório"
   date:
     abbr_day_names:
     - dom
@@ -252,3 +278,7 @@ pt-BR:
       long: "%d de %B de %Y, %H:%M"
       short: "%d de %B, %H:%M"
     pm: ''
+  mail:
+    automatic_message: Isso é uma mensagem automatica. Não responda esse email.
+    copyright_message: "Gerenciamento escolar - Todos os direitos reservados - Copyright © 2020"
+    default_from: "Gerenciamento escolar <gerenciamentoescolar@email.com>"

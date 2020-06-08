@@ -13,6 +13,17 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'rails_admin'
 
+# Image upload
+gem 'carrierwave', '~> 1.0'
+gem 'carrierwave-aws'
+gem 'rmagick'
+
+# Notification
+gem 'twilio-ruby'
+
+# Queue
+gem 'sidekiq'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
@@ -24,6 +35,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'mailcatcher'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
